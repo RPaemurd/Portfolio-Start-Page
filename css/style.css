@@ -53,8 +53,6 @@ body {
     border: 3px solid #000;
 }
 
-
-
 .scroll-controls {
     position: absolute;
     right: -55px;
@@ -89,7 +87,7 @@ body {
 
 .scroll-track {
     width: 40px;
-    height: 550px;
+    height: 300px;
     background: #f7e7c0;
     border: 3px solid #000;
 }
