@@ -10,7 +10,7 @@
 body {
     font-family: Courier New, Courier, monospace;
     margin: 0;
-    background: linear-gradient(135deg, #7ccbeb 0%, #f3d7a3 50%, #fc956c 100%);
+    background: linear-gradient(135deg, #58c1eb 0%, #efc77e 50%, #fe8251 100%);
     min-height: 100vh;
     cursor: url('../images/icons/mouse-pointer.svg'), auto;
     padding: 20px;
@@ -31,6 +31,67 @@ body {
     background-color: #FFFFFF;
     border: 3px solid #000000;
     padding: 14px;
+}
+
+/* ----- SCROLL FUNKTION ----- */
+/* Custom scrollbar för main-content */
+.main-content::-webkit-scrollbar {
+    width: 50px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f7e7c0;
+    border-left: 3px solid #000;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #64eec5;
+    border: 3px solid #000;
+}
+
+/* Firefox */
+.main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #64eec5 #f7e7c0;
+}
+
+.scroll-controls {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.scroll-up, .scroll-down {
+    width: 40px;
+    height: 40px;
+    background: #64eec5;
+    border: 3px solid #000;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000;
+    transition: transform 0.1s;
+}
+
+.scroll-up:hover, .scroll-down:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #000;
+}
+
+.scroll-up:active, .scroll-down:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.scroll-track {
+    width: 40px;
+    height: 200px;
+    background: #f7e7c0;
+    border: 3px solid #000;
 }
 
 /* ----- SIDOMENY (VÄNSTER) ----- */
@@ -76,15 +137,24 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 700;
-    margin-bottom: 8px;
 }
 
 .sidebar .nav-links li a span {
     margin-right: 12px;
 }
 
+/* Make the resume and portfolio icons smaller in the sidebar */
+.sidebar .nav-links li a img[src*="resume-50"],
+.sidebar .nav-links li a img[src*="portfolio-50"],
+.sidebar .nav-links li a img[src*="home-24"] {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
 .sidebar .nav-links li a.active {
-    background-color: #000;
+    background-color: #00000086;
     color: #FFF;
 }
 
