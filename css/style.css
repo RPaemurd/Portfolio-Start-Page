@@ -16,11 +16,15 @@ body {
     padding: 20px;
 }
 
-.app-container {
-    display: flex;
+.page-wrapper {
+    position: relative;
     max-width: 1400px;
     width: calc(100% - 40px);
     margin: 0 auto;
+}
+
+.app-container {
+    display: flex;
     background-color: #f7e7c0;
     border: 3px solid #000;
     box-shadow: 5px 5px 0px #000;
@@ -49,15 +53,11 @@ body {
     border: 3px solid #000;
 }
 
-/* Firefox */
-.main-content {
-    scrollbar-width: thin;
-    scrollbar-color: #64eec5 #f7e7c0;
-}
+
 
 .scroll-controls {
-    position: fixed;
-    right: 30px;
+    position: absolute;
+    right: -55px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -89,7 +89,7 @@ body {
 
 .scroll-track {
     width: 40px;
-    height: 200px;
+    height: 550px;
     background: #f7e7c0;
     border: 3px solid #000;
 }
@@ -171,6 +171,9 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 15px 25px;
+    /* Custom scrollbar för Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #64eec5 #f7e7c0;
 }
 
 /* Header (Sökfält) */
