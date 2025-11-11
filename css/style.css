@@ -179,20 +179,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 17px;
 }
-.back-button {
+/* .back-button {
     font-size: 1.5rem;
     background: url(/images/icons/icons8-arrow-32.png);
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
     border: 3px solid #000;
+    background: #fff;
     width: 40px;
     height: 40px;
     padding: 8px;
     cursor: pointer;
-}
+} */
 .search-bar {
     display: flex;
     justify-content: end;
@@ -200,7 +201,7 @@ body {
     background: #fff;
     border: 3px solid #000;
     padding: 0 12px;
-    margin: 0 24px;
+  
 }
 .search-bar input {
     border: none;
@@ -274,20 +275,21 @@ body {
 figure.trainer-card-left {
     flex-basis: 30%;
     flex-shrink: 0;
-    background-image: url(/images/icons/Motiv.png);
-    background-size: cover;
-    background-position: center top;
+    background-image: url(/images/icons/alternativ5.png);
+    background-size: 133%;
+    background-position: center center;
     border: 3px solid #000;
     margin: 0;
-    align-self: stretch;
-    min-height: 0;
+    margin-top: 1rem;
+    height: 100%;
+    max-height: 270px;
 }
 
 .trainer-card-right{
     flex-basis: 70%;
     display: flex;
     flex-direction: column;
-    padding: 0.7rem 1.2rem 0.7rem 0.7rem;
+    padding: 0.7rem 0rem 0.7rem 0.7rem;
 }
 .trainer-card-left .trainer-pic {
     width: 100%;
@@ -341,6 +343,9 @@ dl.trainer-stats {
     background-color: #eed178;
     flex: 1 1 0;
     min-width: 0;
+}
+.trainer-stats img[src*="react-js"] {
+    margin-top: 3px;
 }
 .trainer-stats dt { 
     font-size: 1rem;
@@ -398,7 +403,8 @@ dl.trainer-stats {
     gap: 14px;
     border: 3px solid #000;
     margin-bottom: 0;
-    max-height: 300px;
+    height: 300px;
+    padding-bottom: 31.5px;
     box-shadow: 5px 5px 0px #000;
 }
 .work-card:not(:first-of-type) {
@@ -418,7 +424,7 @@ dl.trainer-stats {
 }
 .work-details p { 
     font-size: 1rem; 
-    color: #333;
+    color: #030303;
     margin: 0;
 }
 .work-details time { 
